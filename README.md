@@ -11,7 +11,7 @@ STEP2: The data is analyzed automatically and plotted when you click on the tab 
 
 ## Output options
 <p align="center"><img src="images/Chart1.png" alt="Chart 1"/><br/>
-  **Chart 1**: Distributions with positive skew in the range 0 to +2 (plotted squared), and excess kurtosis up to +6.</p>
+ <b>Chart 1</b>: Distributions with positive skew in the range 0 to +2 (plotted squared), and excess kurtosis up to +6.</p>
 <br/>
 <p align="center"><img src="images/Chart2.png" alt="Chart 2"/><br/>
   **Chart 2**: Distributions with skewness in the range +3 to +3, and excess kurtosis up to +8.</p>
