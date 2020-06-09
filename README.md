@@ -1,7 +1,7 @@
 # PearsonPlot
 A tool to investigate statistical distribution of univariate observations. It plots the skewness-vs-kurtosis of your data (together with bootsrapped samples) on a Pearson-type diagram for comparison with common statsitical distributions. Use it do investigate the possible statistical model describing your data. For example, it helped me discover that thermal conductivity of thermal insulation (which I initially assumed to be log-normal) is actually log-logistic, as it is not a homogeneous material, but is a mixture of two components (air and fibres).
 
-This workbook contains a Visual Basic for Applications (VBA) macro to analyze the statistical distribution of observations.
+This workbook contains a Visual Basic for Applications (VBA) macro to analyze the statistical distribution of your data, and to generate plots.
 
 The workbook is a further development of [Karl Pearson](https://en.wikipedia.org/wiki/Karl_Pearson)'s diagram (www.wikipedia.org/wiki/Pearson_distribution) which was made popular again by the simpler "[Cullen & Frey](https://www.springer.com/gp/book/9780306459566) plot" in [R](https://cran.r-project.org/web/packages/fitdistrplus/vignettes/paper2JSS.pdf). This workbook vastly improves upon the "Cullen and Frey plot" by comparing the observations with many more common distibutions. Moreover, 3 variants of the plot can be generated, depending on the range of skewness and kurtosis in your data.
 
