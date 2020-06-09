@@ -1,7 +1,7 @@
 # PearsonPlot
-A tool to investigate statistical distribution of univariate observations. Plots skewness-vs-kurtosis of your data (together with bootsrapped observations) on a Pearson diagram, and compares to common statsitical distributions.
+A tool to investigate statistical distribution of univariate observations. It plots the skewness-vs-kurtosis of your data (together with bootsrapped observations) on a Pearson diagram for comparison with common statsitical distributions.
 
-This workbook contains one Visual Basic for Applications (VBA) macro do analyze the statistical distribution of observations.
+This workbook contains a Visual Basic for Applications (VBA) macro to analyze the statistical distribution of observations.
 
 The workbook is a further development of Karl Pearson's diagram (www.wikipedia.org/wiki/Pearson_distribution) which was made popular again by the simplifed Cullen & Frey plot in R. This workbook vastly improves upon the Cullen and Frey plot by comparing the observations with many common distibutions. Moreover, 3 variants of the plot can be generated, depending on the range of skewness and kurtosis in your data.
 
