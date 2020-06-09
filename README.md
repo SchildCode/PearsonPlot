@@ -3,7 +3,7 @@ A tool to investigate statistical distribution of univariate observations. It pl
 
 This workbook contains a Visual Basic for Applications (VBA) macro to analyze the statistical distribution of observations.
 
-The workbook is a further development of Karl Pearson's diagram (www.wikipedia.org/wiki/Pearson_distribution) which was made popular again by the simplifed Cullen & Frey plot in R. This workbook vastly improves upon the Cullen and Frey plot by comparing the observations with many common distibutions. Moreover, 3 variants of the plot can be generated, depending on the range of skewness and kurtosis in your data.
+The workbook is a further development of [Karl Pearson](https://en.wikipedia.org/wiki/Karl_Pearson)'s diagram (www.wikipedia.org/wiki/Pearson_distribution) which was made popular again by the simpler "[Cullen & Frey](https://www.springer.com/gp/book/9780306459566) plot" in [R](https://cran.r-project.org/web/packages/fitdistrplus/vignettes/paper2JSS.pdf). This workbook vastly improves upon the "Cullen and Frey plot" by comparing the observations with many more common distibutions. Moreover, 3 variants of the plot can be generated, depending on the range of skewness and kurtosis in your data.
 
 ## User-instructions
 STEP1: Paste your observations into column A of sheet "InputData". There is no limit to the number of values.
