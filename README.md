@@ -1,5 +1,5 @@
 # PearsonPlot
-A tool to investigate statistical distribution of univariate observations. It plots the skewness-vs-kurtosis of your data (together with bootsrapped observations) on a Pearson diagram for comparison with common statsitical distributions. Use it do investigate the possible statistical model describing your data. For example, it helped me discover that thermal conductivity of thermal insulation (which I initially assumed is Log-normal) is actually log-logistic, as it is not a homogeneous material, but is a mixture of two components (air and fibres).
+A tool to investigate statistical distribution of univariate observations. It plots the skewness-vs-kurtosis of your data (together with bootsrapped observations) on a Pearson-type diagram for comparison with common statsitical distributions. Use it do investigate the possible statistical model describing your data. For example, it helped me discover that thermal conductivity of thermal insulation (which I initially assumed is Log-normal) is actually log-logistic, as it is not a homogeneous material, but is a mixture of two components (air and fibres).
 
 This workbook contains a Visual Basic for Applications (VBA) macro to analyze the statistical distribution of observations.
 
