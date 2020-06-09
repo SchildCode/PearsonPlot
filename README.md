@@ -7,7 +7,8 @@ The workbook is a further development of Karl Pearson's diagram (www.wikipedia.o
 
 ## User-instructions
 STEP1: Paste your observations into column A of sheet "InputData". There is no limit to the number of values.
-STEP2: The data is analyzed automatically and plotted when you click on the tab for one of the plots (Chart1, Chart2 or Chart3).
+
+STEP2: The data is analyzed automatically and plotted when you click on the tab for one of the plots (Chart1, Chart2 or Chart3). The sample skewness and kurtosis of your data is plotted as a black circle, and [bootstrapped](https://en.wikipedia.org/wiki/Bootstrapping_(statistics)) values are plotted with small red dots, to show the range of possible values of the polulation skewness and kurtosis.
 
 ## Output options
 <p align="center"><img src="images/Chart1.png" alt="Chart 1"/><br/>
