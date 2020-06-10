@@ -15,7 +15,7 @@ This workbook contains a Visual Basic for Applications (VBA) macro to analyze th
 
 ## Output options
 <p align="center"><img src="images/Chart1.png" alt="Chart 1"/><br/>
-<b>Chart 1</b>: Distributions with positive skew in the range 0 to +2 (plotted squared), and excess kurtosis up to +6.<br/>(The example observations plotted on this chart are normally distributed).</p>
+<b>Chart 1</b>: Distributions with positive skew in the range 0 to +2 (plotted squared), and excess kurtosis up to +6.<br/>(The example observations plotted on this chart are normally-distributed).</p>
 <br/>
 <p align="center"><img src="images/Chart2.png" alt="Chart 2"/><br/>
 <b>Chart 2</b>: Distributions with skewness in the range +3 to +3, and excess kurtosis up to +8.<br/>(The example observations plotted on this chart are from a negative-expoential distribution)</p>
