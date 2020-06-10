@@ -21,7 +21,7 @@ This workbook contains a Visual Basic for Applications (VBA) macro to analyze th
 <b>Chart 2</b>: Distributions with skewness in the range +3 to +3, and excess kurtosis up to +8.<br/>(The example observations plotted on this chart are from a negative-expoential distribution)</p>
 <br/>
 <p align="center"><img src="images/Chart3.png" alt="Chart 3"/><br/>
-<b>Chart 3</b>: Distributions with any value of skewness and kurtosis. Both parameters are squashed into the range -1 to +1. Skewness squared is subtracted from kurtosis before squashing, thus reducing the "impossible region" to a small rectangle, and making  distributions with kurtosis &Proportional; skewness² into horizontal lines.<br/>(The example observations plotted on this chart are from a power-law distribution, which rarely occurs in the physical world)</p>
+<b>Chart 3</b>: Distributions with any value of skewness and kurtosis. Both parameters are squashed into the range -1 to +1. Skewness squared is subtracted from kurtosis before squashing, thus reducing the "impossible region" to a small rectangle, and making  distributions with kurtosis &Proportional; skewness² into horizontal lines.<br/>(The example observations plotted on this chart are from a power-law distribution, which rarely occurs in the physical world, and coincidentally have the same kurtosis as the discrete Poisson distrubution)</p>
 
 ## Licence
 GPL3
