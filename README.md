@@ -15,13 +15,13 @@ This workbook contains a Visual Basic for Applications (VBA) macro to analyze th
 
 ## Output options
 <p align="center"><img src="images/Chart1.png" alt="Chart 1"/><br/>
-<b>Chart 1</b>: Distributions with positive skew in the range 0 to +2 (plotted squared), and excess kurtosis up to +6.</p>
+<b>Chart 1</b>: Distributions with positive skew in the range 0 to +2 (plotted squared), and excess kurtosis up to +6. (The example observations plotted on this chart are normally distributed).</p>
 <br/>
 <p align="center"><img src="images/Chart2.png" alt="Chart 2"/><br/>
-<b>Chart 2</b>: Distributions with skewness in the range +3 to +3, and excess kurtosis up to +8.</p>
+<b>Chart 2</b>: Distributions with skewness in the range +3 to +3, and excess kurtosis up to +8. (The example observations plotted on this chart are from a negative-expoential distribution)</p>
 <br/>
 <p align="center"><img src="images/Chart3.png" alt="Chart 3"/><br/>
-<b>Chart 3</b>: Distributions with any value of skewness and kurtosis. Both parameters are squashed into the range -1 to +1. Skewness squared is subtracted from kurtosis before squashing, thus reducing the "impossible region" to a small rectangle, and making  distributions with kurtosis &Proportional; skewness² into horizontal lines.</p>
+<b>Chart 3</b>: Distributions with any value of skewness and kurtosis. Both parameters are squashed into the range -1 to +1. Skewness squared is subtracted from kurtosis before squashing, thus reducing the "impossible region" to a small rectangle, and making  distributions with kurtosis &Proportional; skewness² into horizontal lines. (The example observations plotted on this chart are from a power-law distribution, which rarely occurs in the physical world)</p>
 
 ## Licence
 GPL3
