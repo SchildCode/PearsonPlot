@@ -4,7 +4,7 @@ A tool to investigate statistical distribution of univariate observations. It pl
 The workbook is a further development of [Karl Pearson](https://en.wikipedia.org/wiki/Karl_Pearson)'s diagram (www.wikipedia.org/wiki/Pearson_distribution), which was revived by [Cullen & Frey](https://www.springer.com/gp/book/9780306459566). This workbook vastly improves upon the "Cullen and Frey plot" in [R](https://cran.r-project.org/web/packages/fitdistrplus/vignettes/paper2JSS.pdf) by comparing the observations with many more common distibutions, ones with either fixed skewness & kurtosis (i.e. shown as a point in the chart, e.g. Normal, Exponential) or varying skewness & kurtosis (i.e. shown as a line in the chart, e.g. Log-normal, Weibull).
 
 Statistical sistributions that are plotted: 
-- *Distributions with fixed skewnes & kurtosis*: Exponential, Laplace (double-exponential), Gumbel (Extreme value), Hyperbolic secant, Logistic, Rayleigh, Normal, Uniform, Sine & Cosine, |Sine| & |Cosine|, Coin-flip.
+- *Distributions with fixed skewnes & kurtosis*: [Exponential](https://en.wikipedia.org/wiki/Exponential_distribution), Laplace (double-exponential), Gumbel (Extreme value), Hyperbolic secant, Logistic, Rayleigh, Normal, Uniform, Sine & Cosine, |Sine| & |Cosine|, Coin-flip.
 - *Distributions with variable skewnes & kurtosis*: Log-logistic (Fisk), Asymmetric Laplace, Inverse gamma, Invere Χ², Log-normal, Gamma, Χ² (Chi-squared), Erlang, Student's t, Beta, Poisson, Fréchet, Negative Weibull, Weibull, Negative Fréchet, Power-law, Pareto.
 
 ## A note of caution
