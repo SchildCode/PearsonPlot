@@ -27,7 +27,7 @@ This workbook contains a Visual Basic for Applications (VBA) macro to analyze th
 <p align="center"><img src="images/Chart3.png" alt="Chart 3"/><br/>
 <b>Chart 3</b>: This chart can show all valid values of skewness (±&infin;) and excess kurtosis (-3 to +&infin;). Both parameters are squashed into the range ±1. Skewness-squared is subtracted from kurtosis before squashing, making distributions with kurtosis &Proportional; skewness² into horizontal lines (e.g. Poisson, Beta with &alpha;&rarr;0), and the "impossible region" becomes bounded below a horizontal line (squashed excess kurtosis -0.5), and so can be omitted from the chart.<br/>(The example observations plotted on this chart are from a power-law distribution, which rarely occurs in the physical world, and coincidentally have the same kurtosis as the discrete Poisson distrubution)</p>
 
-## Further reading
+## Further reading about monent-ratio diagrams
 - SAS blog on Moment-Ratio diagrams [https://blogs.sas.com/content/iml/2020/01/15/moment-ratio-diagram.html]
 - Vargo, E., Pasupathy, R., Leemis, L.M. (2017). Moment-Ratio Diagrams for Univariate Distributions. In: Glen, A., Leemis, L. (eds) Computational Probability Applications. International Series in Operations Research & Management Science, vol 247. Springer, Cham. [https://doi.org/10.1007/978-3-319-43317-2_12]
 
