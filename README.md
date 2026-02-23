@@ -1,5 +1,5 @@
 # PearsonPlot (Moment-Ratio Diagram)
-A tool to investigate statistical distribution of univariate observations. It plots the [skewness](https://en.wikipedia.org/wiki/Skewness)-vs-[kurtosis](https://en.wikipedia.org/wiki/Kurtosis) of your data (together with bootsrapped samples) on a diagram for comparison with common [statsitical distributions](https://en.wikipedia.org/wiki/List_of_probability_distributions). Use it to investigate the possible statistical model describing your data. Three variants of the plot can be generated, depending on the range of skewness and kurtosis in your data.
+A tool to investigate statistical distribution of univariate observations. It plots the [skewness](https://en.wikipedia.org/wiki/Skewness)-vs-[kurtosis](https://en.wikipedia.org/wiki/Kurtosis) of your data (together with bootsrapped samples) on a diagram for comparison with common [statsitical distributions](https://en.wikipedia.org/wiki/List_of_probability_distributions). Use it to find the statistical distribution that best describes your data. Three variants of the plot can be generated, depending on the range of skewness and kurtosis in your data.
 
 The workbook is a further development of [Karl Pearson](https://en.wikipedia.org/wiki/Karl_Pearson)'s diagram (www.wikipedia.org/wiki/Pearson_distribution), which was revived by [Cullen & Frey](https://www.springer.com/gp/book/9780306459566). This workbook vastly improves upon the "Cullen and Frey plot" in [R](https://cran.r-project.org/web/packages/fitdistrplus/vignettes/paper2JSS.pdf) by comparing the observations with many more common distibutions, ones with either fixed skewness & kurtosis (i.e. shown as a point in the chart, e.g. Normal, Exponential) or varying skewness & kurtosis (i.e. shown as a line in the chart, e.g. Log-normal, Weibull).
 
@@ -49,7 +49,7 @@ It is very common that real-world data is grouped, e.g. different measurement po
 * In R: fit each candidate per group, sum log-likelihoods across groups, then compute global AIC/BIC per family (penalizing for number of parameters across all groups). `fitdistrplus` doesn’t automatically “sum across groups” for you, but it gives you the per-fit Log-Likelihood (logLik)/parameter counts you need.
 * In Python: loop over groups, `sum dist.logpdf(...)`, compute AIC/BIC on the combined logLik.
 
-## Further reading about monent-ratio diagrams
+## Further reading about moment-ratio diagrams
 - SAS blog on Moment-Ratio diagrams [https://blogs.sas.com/content/iml/2020/01/15/moment-ratio-diagram.html]
 - Vargo, E., Pasupathy, R., Leemis, L.M. (2017). Moment-Ratio Diagrams for Univariate Distributions. In: Glen, A., Leemis, L. (eds) Computational Probability Applications. International Series in Operations Research & Management Science, vol 247. Springer, Cham. [https://doi.org/10.1007/978-3-319-43317-2_12]
 
