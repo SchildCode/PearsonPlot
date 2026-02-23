@@ -40,7 +40,7 @@ This workbook contains a Visual Basic for Applications (VBA) macro to analyze th
 4. **Visually inspect diagnostic plots**: Prioritise [Q–Q](https://en.wikipedia.org/wiki/Q%E2%80%93Q_plot) / [P–P](https://en.wikipedia.org/wiki/P%E2%80%93P_plot) plots and [Empirical/Cumulative Distribution Function](https://en.wikipedia.org/wiki/Empirical_distribution_function) (CDF) overlays (often visually more informative for quality-control than a single p-value):
    * R: `denscomp`, `cdfcomp`, `qqcomp`, `ppcomp` compare multiple fitted distributions directly.
    * Python: build plots from `dist.cdf`, `dist.ppf`, and sorted data.
-5. **Goodness-of-fit (GOF) tests and/or bootstrap confirmation**: Use a GOF statistic (e.g. Anderson–Darling, Cramér–von Mises, KS) and consider parametric bootstrap for a publication-grade check (especially tail fit):
+5. **Goodness-of-fit (GOF) tests and/or bootstrap confirmation**: Use a GOF statistic (e.g. Anderson–Darling, Cramér–von Mises, KS) and consider parametric [bootstrap](https://en.wikipedia.org/wiki/Bootstrapping_(statistics)) for a publication-grade check (especially tail fit):
    * Python: `scipy.stats.goodness_of_fit` provides fit-aware GOF statistics.
 6. **Report your selection principle**: State how the shortlist was produced (*PearsonPlot*), then how the final model was chosen (e.g. lowest BIC + best Q–Q tail behaviour + bootstrap uncertainty).
 
