@@ -46,8 +46,8 @@ This workbook contains a Visual Basic for Applications (VBA) macro to analyze th
 
 ## How to deal with grouped data (numerical workflow)
 It is very common that real-world data is grouped, e.g. different measurement point locations (different groups), with repeated observations at each point (within each group). The data are [Independent and Identically Distributed](https://en.wikipedia.org/wiki/Independent_and_identically_distributed_random_variables) (IID) only within each group of observations, but you want to find the distribution that best fits all groups (but with different fit-parameters for each group). You can test distribution families objectively as followed, by modelling the grouping rather than pretending that the pooled data are all IID:
-* In R: fit each candidate per group, sum log-likelihoods across groups, then compute global AIC/BIC per family (penalizing for number of parameters across all groups). `fitdistrplus` doesn’t automatically “sum across groups” for you, but it gives you the per-fit loglik/parameter counts you need.
-* In Python: loop over groups, `sum dist.logpdf(...)`, compute AIC/BIC on the combined loglik.
+* In R: fit each candidate per group, sum log-likelihoods across groups, then compute global AIC/BIC per family (penalizing for number of parameters across all groups). `fitdistrplus` doesn’t automatically “sum across groups” for you, but it gives you the per-fit Log-Likelihood (logLik)/parameter counts you need.
+* In Python: loop over groups, `sum dist.logpdf(...)`, compute AIC/BIC on the combined logLik.
 
 ## Further reading about monent-ratio diagrams
 - SAS blog on Moment-Ratio diagrams [https://blogs.sas.com/content/iml/2020/01/15/moment-ratio-diagram.html]
