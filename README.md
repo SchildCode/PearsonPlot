@@ -27,7 +27,7 @@ This workbook contains a Visual Basic for Applications (VBA) macro to analyze th
 <p align="center"><img src="images/Chart3.png" alt="Chart 3"/><br/>
 <b>Chart 3</b>: This chart can show all valid values of skewness (±&infin;) and excess kurtosis (-3 to +&infin;). Both parameters are squashed into the range ±1. Skewness-squared is subtracted from kurtosis before squashing, making distributions with kurtosis &Proportional; skewness² into horizontal lines (e.g. Poisson, Beta with &alpha;&rarr;0), and the "impossible region" becomes bounded below a horizontal line (squashed excess kurtosis -0.5), and so can be omitted from the chart.<br/>(The example observations plotted on this chart are from a power-law distribution, which rarely occurs in the physical world, and coincidentally have the same kurtosis as the discrete Poisson distrubution)</p>
 
-## How to confirm the best candidate distribution (numeric workflow)
+## How to confirm the best candidate distribution (numerical workflow)
 *PeasonPlot* is a great exploratory tool to subjectively select the best distribution, or at worst to find a shortlist of candidate distributions. But for scientific publishing, additional steps are recommended to numerically compare the confirm the best distribution.
 
 1. **Shortlist candidates (exploratory)**: Use *PearsonPlot* (moment-ratio diagram) to shortlist a small set of (say 3 to 8) plausible distribution families.
@@ -44,7 +44,7 @@ This workbook contains a Visual Basic for Applications (VBA) macro to analyze th
    * Python: `scipy.stats.goodness_of_fit` provides fit-aware GOF statistics.
 6. **Report your selection principle**: State how the shortlist was produced (*PearsonPlot*), then how the final model was chosen (e.g. lowest BIC + best Q–Q tail behaviour + bootstrap uncertainty).
 
-## How to deal with grouped data
+## How to deal with grouped data (numerical workflow)
 It is very common that real-world data is grouped, e.g. different measurement point locations (different groups), with repeated observations at each point (within each group). The data are [Independent and Identically Distributed](https://en.wikipedia.org/wiki/Independent_and_identically_distributed_random_variables) (IID) only within each group of observations, but you want to find the distribution that best fits all groups (but with different fit-parameters for each group). You can test distribution families objectively as followed, by modelling the grouping rather than pretending that the pooled data are all IID:
 * In R: fit each candidate per group, sum log-likelihoods across groups, then compute global AIC/BIC per family (penalizing for number of parameters across all groups). `fitdistrplus` doesn’t automatically “sum across groups” for you, but it gives you the per-fit loglik/parameter counts you need.
 * In Python: loop over groups, `sum dist.logpdf(...)`, compute AIC/BIC on the combined loglik.
