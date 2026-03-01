@@ -32,22 +32,22 @@ This workbook contains a Visual Basic for Applications (VBA) macro to analyze th
 
 1. **Shortlist candidates (exploratory)**: Use *PearsonPlot* (moment-ratio diagram) to shortlist a small set of (say 3 to 8) plausible distribution families.
 2. **Fit each candidate distribution to the data**: Prefer [maximum likelihood estimation](https://en.wikipedia.org/wiki/Maximum_likelihood_estimation) (MLE):
-   * R: `fitdistrplus::fitdist(x, "<dist>", method="mle")`, where `<dist>` is candidate distributions, e.g. `lnorm`, `gamma`, `weibull`
-   * Python: `scipy.stats.<dist>.fit(x)` 
+   * *R*: `fitdistrplus::fitdist(x, "<dist>", method="mle")`, where `<dist>` is candidate distributions, e.g. `lnorm`, `gamma`, `weibull`
+   * *Python*: `scipy.stats.<dist>.fit(x)` 
 3. **Compare candidates by objective criteria**: Compute [log-likelihood](https://en.wikipedia.org/wiki/Likelihood_function#Log-likelihood), [Akaike information criterion](https://en.wikipedia.org/wiki/Akaike_information_criterion) (AIC), [Bayesian information criterion](https://en.wikipedia.org/wiki/Bayesian_information_criterion) (BIC) and rank your candidate distributions (lower AIC/BIC is more parsimonious, i.e. a good compromise between complexity and accuracy):
-   * R: `gofstat(list_of_fits)` returns AIC/BIC and [Goodness-of-fit](https://en.wikipedia.org/wiki/Goodness_of_fit) (GOF) stats for multiple fits.
-   * Python: compute AIC/BIC from `sum(dist.logpdf(x, *params))`.
+   * *R*: `gofstat(list_of_fits)` returns AIC/BIC and [Goodness-of-fit](https://en.wikipedia.org/wiki/Goodness_of_fit) (GOF) stats for multiple fits.
+   * *Python*: compute AIC/BIC from `sum(dist.logpdf(x, *params))`.
 4. **Visually inspect diagnostic plots**: Prioritise [Q–Q](https://en.wikipedia.org/wiki/Q%E2%80%93Q_plot) / [P–P](https://en.wikipedia.org/wiki/P%E2%80%93P_plot) plots and [Empirical/Cumulative Distribution Function](https://en.wikipedia.org/wiki/Empirical_distribution_function) (CDF) overlays (often visually more informative for quality-control than a single p-value):
-   * R: `denscomp`, `cdfcomp`, `qqcomp`, `ppcomp` compare multiple fitted distributions directly.
-   * Python: build plots from `dist.cdf`, `dist.ppf`, and sorted data.
+   * *R*: `denscomp`, `cdfcomp`, `qqcomp`, `ppcomp` compare multiple fitted distributions directly.
+   * *Python*: build plots from `dist.cdf`, `dist.ppf`, and sorted data.
 5. **Goodness-of-fit (GOF) tests and/or bootstrap confirmation**: Use a GOF statistic (e.g. Anderson–Darling, Cramér–von Mises, KS) and consider parametric [bootstrap](https://en.wikipedia.org/wiki/Bootstrapping_(statistics)) for a publication-grade check (especially tail fit):
-   * Python: `scipy.stats.goodness_of_fit` provides fit-aware GOF statistics.
+   * *Python*: `scipy.stats.goodness_of_fit` provides fit-aware GOF statistics.
 6. **Report your selection principle**: State how the shortlist was produced (*PearsonPlot*), then how the final model was chosen (e.g. lowest BIC + best Q–Q tail behaviour + bootstrap uncertainty).
 
 ## How to deal with grouped data (numerical workflow)
 It is very common that real-world data is grouped, e.g. different measurement point locations (different groups), with repeated observations at each point (within each group). The data are [Independent and Identically Distributed](https://en.wikipedia.org/wiki/Independent_and_identically_distributed_random_variables) (IID) only within each group of observations, but you want to find the distribution that best fits all groups (but with different fit-parameters for each group). You can test distribution families objectively as followed, by modelling the grouping rather than pretending that the pooled data are all IID:
-* In R: fit each candidate per group, sum log-likelihoods across groups, then compute global AIC/BIC per family (penalizing for number of parameters across all groups). `fitdistrplus` doesn’t automatically “sum across groups” for you, but it gives you the per-fit Log-Likelihood (logLik)/parameter counts you need.
-* In Python: loop over groups, `sum dist.logpdf(...)`, compute AIC/BIC on the combined logLik.
+* *R*: Fit each candidate per group, sum log-likelihoods across groups, then compute global AIC/BIC per family (penalizing for number of parameters across all groups). `fitdistrplus` doesn’t automatically “sum across groups” for you, but it gives you the per-fit Log-Likelihood (logLik)/parameter counts you need.
+* *Python*: Øoop over groups, `sum dist.logpdf(...)`, compute AIC/BIC on the combined logLik.
 
 ## Further reading about moment-ratio diagrams
 - SAS blog on Moment-Ratio diagrams [https://blogs.sas.com/content/iml/2020/01/15/moment-ratio-diagram.html]
